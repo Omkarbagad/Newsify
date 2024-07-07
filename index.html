@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#">
+                <h1 onclick="reload()" >NEWSIFY</h1>
+            </a>
+            <div class="nav-links">
+                <ul class="flex response " >
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                    <li class="hover-link nav-item" id="economy" onclick="onNavItemClick('economy')">Economy</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g:-Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card-container container flex" id="card-container">
+            <!-- Dynamic content goes here -->
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the content</h3>
+                <h6 class="news-source" id="news-source">End gadget 36/08/2023</h6>
+                <p class="news-description" id="news-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, error. Minima necessitatibus architecto iste omnis sint sit voluptatum quasi, aspernatur assumenda. Nihil ullam non sapiente sint possimus ex officia at?</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
